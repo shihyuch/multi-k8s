@@ -18,7 +18,7 @@ before_install:
   - docker build -t dockershih0512/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true dockershih0512/docker-react:latest npm run test
+  - docker run dockershih0512/react-test npm test -- --coverage
 
 deploy:
   provider: script
